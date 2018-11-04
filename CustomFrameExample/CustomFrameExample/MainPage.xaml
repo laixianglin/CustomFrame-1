@@ -1,14 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:CustomFrameExample"
-             x:Class="CustomFrameExample.MainPage">
-
-    <StackLayout>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:CustomFrameExample.Controls;assembly=CustomFrameExample"
+    x:Class="CustomFrameExample.MainPage">
+    <StackLayout
+        Padding="40"
+        Spacing="10">
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Label
+            Text="Welcome to Xamarin.Forms!"
+            HorizontalOptions="Start" />
+        <controls:CustomFrame
+            BackgroundColor="DarkRed"
+            HeightRequest="150"
+            CustomRadius="66,66,66,0" />
+        <controls:CustomFrame
+            HasShadow="False"
+            BorderColor="Black"
+            BackgroundColor="Transparent"
+            HeightRequest="200"
+            CustomRadius="0,66,00,66" />
     </StackLayout>
-
 </ContentPage>
